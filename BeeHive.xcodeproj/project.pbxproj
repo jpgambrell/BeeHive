@@ -17,6 +17,12 @@
 		AF7B0E171EDE022700BF5861 /* BeeHiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B0E161EDE022700BF5861 /* BeeHiveUITests.swift */; };
 		AF7B0E3D1EDE091500BF5861 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7B0E301EDE082C00BF5861 /* Alamofire.framework */; };
 		AF7B0E3E1EDE091500BF5861 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF7B0E301EDE082C00BF5861 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AF7B0E431EE06F4400BF5861 /* AddUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B0E421EE06F4400BF5861 /* AddUserTableViewCell.swift */; };
+		AF7B0E441EE06F4400BF5861 /* AddUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B0E421EE06F4400BF5861 /* AddUserTableViewCell.swift */; };
+		AF7B0E451EE06F4400BF5861 /* AddUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B0E421EE06F4400BF5861 /* AddUserTableViewCell.swift */; };
+		AF7B0E491EE06F9800BF5861 /* AdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B0E481EE06F9800BF5861 /* AdminTableViewController.swift */; };
+		AF7B0E4A1EE06F9800BF5861 /* AdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B0E481EE06F9800BF5861 /* AdminTableViewController.swift */; };
+		AF7B0E4B1EE06F9800BF5861 /* AdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B0E481EE06F9800BF5861 /* AdminTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +128,8 @@
 		AF7B0E161EDE022700BF5861 /* BeeHiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeeHiveUITests.swift; sourceTree = "<group>"; };
 		AF7B0E181EDE022700BF5861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF7B0E241EDE082C00BF5861 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		AF7B0E421EE06F4400BF5861 /* AddUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddUserTableViewCell.swift; path = Admin/Users/AddUserTableViewCell.swift; sourceTree = "<group>"; };
+		AF7B0E481EE06F9800BF5861 /* AdminTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminTableViewController.swift; path = Admin/Users/AdminTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +182,7 @@
 		AF7B0DF31EDE022700BF5861 /* BeeHive */ = {
 			isa = PBXGroup;
 			children = (
+				AF7B0E461EE06F5500BF5861 /* Admin */,
 				AF7B0DF41EDE022700BF5861 /* AppDelegate.swift */,
 				AF7B0DF61EDE022700BF5861 /* FirstViewController.swift */,
 				AF7B0DF81EDE022700BF5861 /* SecondViewController.swift */,
@@ -215,6 +224,23 @@
 				AF7B0E3C1EDE082C00BF5861 /* Alamofire.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AF7B0E461EE06F5500BF5861 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				AF7B0E471EE06F6000BF5861 /* User */,
+			);
+			name = Admin;
+			sourceTree = "<group>";
+		};
+		AF7B0E471EE06F6000BF5861 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				AF7B0E481EE06F9800BF5861 /* AdminTableViewController.swift */,
+				AF7B0E421EE06F4400BF5861 /* AddUserTableViewCell.swift */,
+			);
+			name = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +440,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF7B0E491EE06F9800BF5861 /* AdminTableViewController.swift in Sources */,
+				AF7B0E431EE06F4400BF5861 /* AddUserTableViewCell.swift in Sources */,
 				AF7B0DF91EDE022700BF5861 /* SecondViewController.swift in Sources */,
 				AF7B0DF51EDE022700BF5861 /* AppDelegate.swift in Sources */,
 				AF7B0DF71EDE022700BF5861 /* FirstViewController.swift in Sources */,
@@ -424,6 +452,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF7B0E441EE06F4400BF5861 /* AddUserTableViewCell.swift in Sources */,
+				AF7B0E4A1EE06F9800BF5861 /* AdminTableViewController.swift in Sources */,
 				AF7B0E0C1EDE022700BF5861 /* BeeHiveTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +462,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF7B0E451EE06F4400BF5861 /* AddUserTableViewCell.swift in Sources */,
+				AF7B0E4B1EE06F9800BF5861 /* AdminTableViewController.swift in Sources */,
 				AF7B0E171EDE022700BF5861 /* BeeHiveUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
