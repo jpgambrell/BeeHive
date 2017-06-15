@@ -2,7 +2,7 @@
 //  BeeHiveTests.swift
 //  BeeHiveTests
 //
-//  Created by John Gambrell on 5/30/17.
+//  Created by John Gambrell on 6/15/17.
 //  Copyright © 2017 JPG. All rights reserved.
 //
 
