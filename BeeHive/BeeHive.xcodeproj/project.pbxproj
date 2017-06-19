@@ -14,6 +14,7 @@
 		AF5CA1831EF2E1A2009358EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5CA1811EF2E1A2009358EB /* LaunchScreen.storyboard */; };
 		AF5CA18E1EF2E1A2009358EB /* BeeHiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5CA18D1EF2E1A2009358EB /* BeeHiveTests.swift */; };
 		AF5CA1991EF2E1A2009358EB /* BeeHiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5CA1981EF2E1A2009358EB /* BeeHiveUITests.swift */; };
+		AFD956351EF4578800BDE063 /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD956341EF4578800BDE063 /* ProgressCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		AF5CA1941EF2E1A2009358EB /* BeeHiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeeHiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5CA1981EF2E1A2009358EB /* BeeHiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeeHiveUITests.swift; sourceTree = "<group>"; };
 		AF5CA19A1EF2E1A2009358EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFD956341EF4578800BDE063 /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		AF5CA1771EF2E1A2009358EB /* BeeHive */ = {
 			isa = PBXGroup;
 			children = (
+				AFD956331EF4572000BDE063 /* UIControls */,
 				AF5CA1781EF2E1A2009358EB /* AppDelegate.swift */,
 				AF5CA17A1EF2E1A2009358EB /* ViewController.swift */,
 				AF5CA17C1EF2E1A2009358EB /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				AF5CA19A1EF2E1A2009358EB /* Info.plist */,
 			);
 			path = BeeHiveUITests;
+			sourceTree = "<group>";
+		};
+		AFD956331EF4572000BDE063 /* UIControls */ = {
+			isa = PBXGroup;
+			children = (
+				AFD956341EF4578800BDE063 /* ProgressCircleView.swift */,
+			);
+			path = UIControls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			files = (
 				AF5CA17B1EF2E1A2009358EB /* ViewController.swift in Sources */,
 				AF5CA1791EF2E1A2009358EB /* AppDelegate.swift in Sources */,
+				AFD956351EF4578800BDE063 /* ProgressCircleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +344,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -387,6 +401,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -524,6 +540,7 @@
 				AF5CA19F1EF2E1A2009358EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF5CA1A01EF2E1A2009358EB /* Build configuration list for PBXNativeTarget "BeeHiveTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +549,7 @@
 				AF5CA1A21EF2E1A2009358EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF5CA1A31EF2E1A2009358EB /* Build configuration list for PBXNativeTarget "BeeHiveUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +558,7 @@
 				AF5CA1A51EF2E1A2009358EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,26 +1,146 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6hC-xX-n0C">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Today-->
+        <scene sceneID="VaE-bQ-gHs">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Today" id="vkK-mr-Hm2" customClass="ViewController" customModule="BeeHive" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="aI5-hf-Lfc"/>
+                        <viewControllerLayoutGuide type="bottom" id="5NN-XD-uJ2"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="ekp-ag-1G1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Db5-zN-YRH" userLabel="TopView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p5A-AR-25K" customClass="ProgressCircleView" customModule="BeeHive" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="130" height="133"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="strokeEnd">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wy7-5q-MKZ">
+                                <rect key="frame" x="0.0" y="241" width="375" height="241.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QNz-h5-TCO">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uc2-zM-e3E">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYz-KS-8Q9">
+                                <rect key="frame" x="0.0" y="482.5" width="375" height="120.5"/>
+                                <color key="backgroundColor" red="1" green="0.85021957319999997" blue="0.1083996668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Db5-zN-YRH" firstAttribute="width" secondItem="ekp-ag-1G1" secondAttribute="width" id="1gL-Yn-Zj6"/>
+                            <constraint firstItem="vYz-KS-8Q9" firstAttribute="height" secondItem="ekp-ag-1G1" secondAttribute="height" multiplier="0.2" id="90u-bz-DAg"/>
+                            <constraint firstItem="vYz-KS-8Q9" firstAttribute="leading" secondItem="ekp-ag-1G1" secondAttribute="leading" id="9zB-y2-sf7"/>
+                            <constraint firstItem="wy7-5q-MKZ" firstAttribute="height" secondItem="ekp-ag-1G1" secondAttribute="height" multiplier="0.4" id="Idb-lD-MQr"/>
+                            <constraint firstItem="Db5-zN-YRH" firstAttribute="top" secondItem="ekp-ag-1G1" secondAttribute="top" id="MTb-mE-C45"/>
+                            <constraint firstItem="wy7-5q-MKZ" firstAttribute="leading" secondItem="Db5-zN-YRH" secondAttribute="leading" id="PpE-Xd-aCi"/>
+                            <constraint firstItem="wy7-5q-MKZ" firstAttribute="top" secondItem="Db5-zN-YRH" secondAttribute="bottom" id="SsN-2l-Rzk"/>
+                            <constraint firstItem="vYz-KS-8Q9" firstAttribute="top" secondItem="wy7-5q-MKZ" secondAttribute="bottom" id="Y0P-TI-l7y"/>
+                            <constraint firstItem="wy7-5q-MKZ" firstAttribute="width" secondItem="ekp-ag-1G1" secondAttribute="width" id="fwh-YR-AAK"/>
+                            <constraint firstItem="vYz-KS-8Q9" firstAttribute="width" secondItem="ekp-ag-1G1" secondAttribute="width" id="gK2-1P-CPj"/>
+                            <constraint firstItem="Db5-zN-YRH" firstAttribute="height" secondItem="ekp-ag-1G1" secondAttribute="height" multiplier="0.4" id="lo7-MO-peC"/>
+                            <constraint firstItem="Db5-zN-YRH" firstAttribute="leading" secondItem="ekp-ag-1G1" secondAttribute="leading" id="rYZ-Ce-0fC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Today" id="IhH-Ou-7d4"/>
+                    <connections>
+                        <outlet property="tasksProgressCircleView" destination="p5A-AR-25K" id="MwK-74-z7B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vo1-jL-DH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-308" y="-73.313343328335833"/>
+        </scene>
+        <!--Tasks-->
+        <scene sceneID="YRM-fa-XHZ">
+            <objects>
+                <tableViewController id="pQc-jc-BWe" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="WpV-9E-0fm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="CSA-Ek-dOl">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CSA-Ek-dOl" id="q6z-vq-wsL">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pQc-jc-BWe" id="sgd-WF-WGO"/>
+                            <outlet property="delegate" destination="pQc-jc-BWe" id="4CL-0S-OHT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tasks" id="KhT-SI-Cj1"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVK-F4-4bw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="612" y="-64"/>
+        </scene>
+        <!--BeeHive-->
+        <scene sceneID="9H6-tV-FML">
+            <objects>
+                <navigationController title="BeeHive" id="6hC-xX-n0C" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="M8f-GH-fvp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.94898933169999999" green="0.37117382879999999" blue="0.14088433980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vkK-mr-Hm2" kind="relationship" relationship="rootViewController" id="AAK-S8-KMm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Za-0t-l7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1129" y="-81"/>
         </scene>
     </scenes>
 </document>
