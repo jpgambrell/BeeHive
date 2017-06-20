@@ -24,19 +24,25 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Db5-zN-YRH" userLabel="TopView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p5A-AR-25K" customClass="ProgressCircleView" customModule="BeeHive" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="8" width="130" height="133"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bca-kF-vi1" customClass="ProgressCircleView" customModule="BeeHive" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="149" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleStrokeColor">
+                                                <color key="value" red="1" green="0.21723803880000001" blue="0.15334072709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundCircleStrokeColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                                <real key="value" value="4"/>
+                                                <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="strokeEnd">
-                                                <real key="value" value="0.5"/>
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="percentageComplete">
+                                                <real key="value" value="45"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -85,7 +91,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Today" id="IhH-Ou-7d4"/>
                     <connections>
-                        <outlet property="tasksProgressCircleView" destination="p5A-AR-25K" id="MwK-74-z7B"/>
+                        <outlet property="tasksProgressCircleView" destination="Bca-kF-vi1" id="VNH-MX-EK0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vo1-jL-DH8" userLabel="First Responder" sceneMemberID="firstResponder"/>

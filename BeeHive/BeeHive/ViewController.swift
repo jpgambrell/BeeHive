@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         
     }
     override func viewDidAppear(_ animated: Bool) {
-        tasksProgressCircleView.animateCircle(duration: 50.0)
+        tasksProgressCircleView.animateCircle(duration: 1.0)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
