@@ -13,15 +13,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var tasksProgressCircleView: ProgressCircleView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        tasksProgressCircleView.percentageComplete = 60
-        tasksProgressCircleView.circleLayer.strokeEnd = 0
+
+        
+//        tasksProgressCircleView.setupIntialView(progressStrokeColor: UIColor.black, backgroundStrokeColor: UIColor.lightGray, backgroundCircleAlpa: 0.5, strokeWidth: 5, percentageComplete: 45, labelFont: UIFont(name: "Futura", size: self.tasksProgressCircleView.labelFontSize)!, labelColor: UIColor.brown )
+//
+//        tasksProgressCircleView.labelFontSize = 60
         
         
     }
     override func viewDidAppear(_ animated: Bool) {
         
         delay(1.0) {
-            self.tasksProgressCircleView.animateCircle(duration: 0.3)
+            self.tasksProgressCircleView.animateCircle(duration: Double(self.tasksProgressCircleView.percentComplete / 100))
         }
     }
     override func didReceiveMemoryWarning() {

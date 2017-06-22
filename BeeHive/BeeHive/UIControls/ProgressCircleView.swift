@@ -11,23 +11,36 @@ import UIKit
 @IBDesignable
 class ProgressCircleView: UIView {
     
-    @IBInspectable var circleStrokeColor: UIColor = UIColor.orange
-    @IBInspectable var backgroundCircleStrokeColor: UIColor = UIColor.lightGray
-    @IBInspectable var backgroundCircleTransparancy: Double = 1
-    @IBInspectable var lineWidth: CGFloat = 10.0
-    @IBInspectable var percentageComplete: Int = 40
+    @IBInspectable var progressColor: UIColor = UIColor.orange
+    @IBInspectable var bgCircleColor: UIColor = UIColor.lightGray
+    @IBInspectable var bgCircleAlpha: Double = 1
+    @IBInspectable var strokeWidth: CGFloat = 10.0
+    @IBInspectable var percentComplete: Int = 40
     @IBInspectable var labelColor: UIColor = UIColor.black
     @IBInspectable var labelFontSize: CGFloat = 40
     
+    var labelFont : UIFont = UIFont()
     let fillColor: UIColor = UIColor.clear
-    let startAngle =  CGFloat(270).toRadians()
-    let endAngle = CGFloat(269.9).toRadians()
     var circleLayer : CAShapeLayer!
     var backgroundCircleLayer : CAShapeLayer!
     var renderedFromIB : Bool = false
     
     
-    func setupCircles() {
+    func setupIntialView(progressStrokeColor: UIColor, backgroundStrokeColor: UIColor, backgroundCircleAlpa: Double, strokeWidth: CGFloat, percentageComplete: Int,
+                           labelFont: UIFont, labelColor : UIColor) {
+        self.progressColor = progressStrokeColor
+        self.bgCircleColor = backgroundStrokeColor
+        self.bgCircleAlpha = backgroundCircleAlpa
+        self.strokeWidth = strokeWidth
+        self.percentComplete = percentageComplete
+        self.labelFont = labelFont
+        self.labelColor = labelColor
+        setNeedsDisplay()
+    }
+    
+    
+    private func setupCircles() {
+        labelFont = UIFont.systemFont(ofSize: labelFontSize)
         backgroundCircleLayer = CAShapeLayer()
         layer.addSublayer(backgroundCircleLayer)
         circleLayer = CAShapeLayer()
@@ -46,30 +59,29 @@ class ProgressCircleView: UIView {
     
     override func draw(_ rect: CGRect) {
         self.backgroundColor = UIColor.clear
-        let alpha = (backgroundCircleTransparancy >= 0 && backgroundCircleTransparancy <= 1) ? backgroundCircleTransparancy : 1
-        let strokeColor = UIColor(red: backgroundCircleStrokeColor.components.red, green: backgroundCircleStrokeColor.components.green, blue: backgroundCircleStrokeColor.components.blue, alpha: CGFloat(alpha))
+        let alpha = (bgCircleAlpha >= 0 && bgCircleAlpha <= 1) ? bgCircleAlpha : 1
+        let bgStrokeColor = UIColor(red: bgCircleColor.components.red, green: bgCircleColor.components.green, blue: bgCircleColor.components.blue, alpha: CGFloat(alpha))
         
         backgroundCircleLayer.fillColor = fillColor.cgColor
-        backgroundCircleLayer.strokeColor = strokeColor.cgColor
-        backgroundCircleLayer.lineWidth = lineWidth;
-        
+        backgroundCircleLayer.strokeColor = bgStrokeColor.cgColor
+        backgroundCircleLayer.lineWidth = strokeWidth;
         
         circleLayer.fillColor = fillColor.cgColor
-        circleLayer.strokeColor = circleStrokeColor.cgColor
-        circleLayer.lineWidth = lineWidth
+        circleLayer.strokeColor = progressColor.cgColor
+        circleLayer.lineWidth = strokeWidth
         
         let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0),
-                                      radius: (min(bounds.width, bounds.height) - (lineWidth * 2))/2, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+                                      radius: (min(bounds.width, bounds.height) - (strokeWidth * 2))/2, startAngle: CGFloat(270).toRadians(), endAngle: CGFloat(269.999).toRadians(), clockwise: true)
         
         backgroundCircleLayer.path = circlePath.cgPath
         backgroundCircleLayer.strokeEnd = 1
         
         circleLayer.path = circlePath.cgPath
-        circleLayer.strokeEnd = (renderedFromIB) ? CGFloat(percentageComplete) / 100 : 0
+        circleLayer.strokeEnd = (renderedFromIB) ? CGFloat(percentComplete) / 100 : 0
         
         let textAttributes: [NSAttributedStringKey: AnyObject] = [
             NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue) : labelColor.cgColor,
-            NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue) : UIFont.systemFont(ofSize: labelFontSize)
+            NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue) : labelFont.withSize(labelFontSize)
         ]
          guard let context = UIGraphicsGetCurrentContext() else { return }
         // Flip the coordinate system
@@ -77,16 +89,14 @@ class ProgressCircleView: UIView {
         context.translateBy(x: 0, y: bounds.size.height)
         context.scaleBy(x: 1.0, y: -1.0)
         
-        _ = drawText(context: context, text: "\(percentageComplete)%" as NSString, attributes: textAttributes)
+        drawText(context: context, text: "\(percentComplete)%" as NSString, attributes: textAttributes)
         
     }
     
-    func drawText(context: CGContext, text: NSString, attributes: [NSAttributedStringKey: AnyObject]) -> CGSize {
+    private func drawText(context: CGContext, text: NSString, attributes: [NSAttributedStringKey: AnyObject]) {
         let attributedString = NSAttributedString(string: text as String, attributes: attributes)
         
         let textSize = text.size(withAttributes: attributes)
-        
-        // y: Add font.descender (its a negative value) to align the text at the baseline
         let yPos = (bounds.height/2) - (textSize.height/2)
         let xPos = (bounds.width/2) - (textSize.width/2)
         
@@ -95,8 +105,6 @@ class ProgressCircleView: UIView {
         let frame       = CTFramesetterCreateFrame(frameSetter, CFRange(location: 0, length: attributedString.length), textPath, nil)
         
         CTFrameDraw(frame, context)
-        
-        return textSize
     }
     
     override func prepareForInterfaceBuilder() {
@@ -104,28 +112,14 @@ class ProgressCircleView: UIView {
     }
     
     func animateCircle(duration: TimeInterval) {
-        // We want to animate the strokeEnd property of the circleLayer
         let animation = CABasicAnimation(keyPath: "strokePath")
-        
-        // Set the animation duration appropriately
         animation.duration = duration
-        
-        // Animate from 0 (no circle) to 1 (full circle)
         animation.fromValue = 0
-        animation.toValue = CGFloat(percentageComplete) / 100
-        
-        // Do a linear animation (i.e. the speed of the animation stays the same)
+        animation.toValue = CGFloat(percentComplete) / 100
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         
-        // Set the circleLayer's strokeEnd property to 1.0 now so that it's the
-        // right value when the animation ends.
-       // circleLayer.strokeColor = circleStrokeColor.cgColor
-        
-        circleLayer.strokeEnd = CGFloat(percentageComplete) / 100
-        
+        circleLayer.strokeEnd = CGFloat(percentComplete) / 100
         circleLayer.add(animation, forKey: "animateCircle")
-        
-        
     }
     
 }

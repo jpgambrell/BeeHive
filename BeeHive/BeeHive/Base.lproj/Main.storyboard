@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,45 +25,60 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Db5-zN-YRH" userLabel="TopView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bca-kF-vi1" customClass="ProgressCircleView" customModule="BeeHive" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="8" width="192" height="134"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N5P-Z7-SOB" customClass="ProgressCircleView" customModule="BeeHive" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="210" height="149"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="N5P-Z7-SOB" secondAttribute="height" multiplier="169:120" id="IZy-OP-ctC"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="circleStrokeColor">
-                                                <color key="value" red="0.94898933169999999" green="0.37117382879999999" blue="0.14088433980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundCircleStrokeColor">
-                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="percentageComplete">
-                                                <integer key="value" value="55"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="labelFontSize">
-                                                <real key="value" value="25"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="backgroundCircleTransparancy">
-                                                <real key="value" value="1"/>
+                                                <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="labelColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="value" red="0.94898933169999999" green="0.37117382879999999" blue="0.14088433980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="backgroundCircleTransparancy">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleStrokeColor">
+                                                <color key="value" red="1" green="0.15643930440000001" blue="0.32614740730000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundCircleStrokeColor">
+                                                <color key="value" red="0.28001528980000001" green="0.85423451660000005" blue="0.34582722189999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="percentageComplete">
+                                                <integer key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="percentComplete">
+                                                <integer key="value" value="75"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                                <color key="value" red="0.94898933169999999" green="0.37117382879999999" blue="0.14088433980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bgCircleColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="bgCircleAlpha">
+                                                <real key="value" value="0.40000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                                <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="99%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4a-Oo-Ab0">
-                                        <rect key="frame" x="187" y="150" width="80" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="N5P-Z7-SOB" secondAttribute="bottom" constant="82" id="5KI-1o-w2g"/>
+                                    <constraint firstItem="N5P-Z7-SOB" firstAttribute="leading" secondItem="Db5-zN-YRH" secondAttribute="leading" constant="10" id="XMF-Wr-luX"/>
+                                    <constraint firstItem="N5P-Z7-SOB" firstAttribute="top" secondItem="Db5-zN-YRH" secondAttribute="top" constant="10" id="wL7-el-9QZ"/>
+                                </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wy7-5q-MKZ">
-                                <rect key="frame" x="0.0" y="241" width="375" height="241.5"/>
+                                <rect key="frame" x="0.0" y="241" width="375" height="242"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QNz-h5-TCO">
                                     <size key="itemSize" width="50" height="50"/>
@@ -82,7 +98,7 @@
                                 </cells>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYz-KS-8Q9">
-                                <rect key="frame" x="0.0" y="482.5" width="375" height="120.5"/>
+                                <rect key="frame" x="0.0" y="483" width="375" height="121"/>
                                 <color key="backgroundColor" red="1" green="0.85021957319999997" blue="0.1083996668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -104,7 +120,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Today" id="IhH-Ou-7d4"/>
                     <connections>
-                        <outlet property="tasksProgressCircleView" destination="Bca-kF-vi1" id="VNH-MX-EK0"/>
+                        <outlet property="tasksProgressCircleView" destination="N5P-Z7-SOB" id="o4h-c8-A3y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vo1-jL-DH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
