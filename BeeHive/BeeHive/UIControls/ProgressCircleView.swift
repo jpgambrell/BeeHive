@@ -71,7 +71,7 @@ class ProgressCircleView: UIView {
         circleLayer.lineWidth = strokeWidth
         
         let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0),
-                                      radius: (min(bounds.width, bounds.height) - (strokeWidth * 2))/2, startAngle: CGFloat(270).toRadians(), endAngle: CGFloat(269.999).toRadians(), clockwise: true)
+                                      radius: (min(bounds.width, bounds.height) - (strokeWidth * 2))/2, startAngle: CGFloat(-90).toRadians(), endAngle: CGFloat(270).toRadians(), clockwise: true)
         
         backgroundCircleLayer.path = circlePath.cgPath
         backgroundCircleLayer.strokeEnd = 1

@@ -14,6 +14,15 @@
 		AF5CA1831EF2E1A2009358EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5CA1811EF2E1A2009358EB /* LaunchScreen.storyboard */; };
 		AF5CA18E1EF2E1A2009358EB /* BeeHiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5CA18D1EF2E1A2009358EB /* BeeHiveTests.swift */; };
 		AF5CA1991EF2E1A2009358EB /* BeeHiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5CA1981EF2E1A2009358EB /* BeeHiveUITests.swift */; };
+		AF7B68421F02A8CB006E3B2F /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68411F02A8CB006E3B2F /* TasksTableViewController.swift */; };
+		AF7B68431F02A8CB006E3B2F /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68411F02A8CB006E3B2F /* TasksTableViewController.swift */; };
+		AF7B68441F02A8CB006E3B2F /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68411F02A8CB006E3B2F /* TasksTableViewController.swift */; };
+		AF7B68461F02A906006E3B2F /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68451F02A906006E3B2F /* TasksTableViewCell.swift */; };
+		AF7B68471F02A906006E3B2F /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68451F02A906006E3B2F /* TasksTableViewCell.swift */; };
+		AF7B68481F02A906006E3B2F /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68451F02A906006E3B2F /* TasksTableViewCell.swift */; };
+		AF7B684A1F02AE0C006E3B2F /* ProgressLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68491F02AE0C006E3B2F /* ProgressLineView.swift */; };
+		AF7B684B1F02AE0C006E3B2F /* ProgressLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68491F02AE0C006E3B2F /* ProgressLineView.swift */; };
+		AF7B684C1F02AE0C006E3B2F /* ProgressLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68491F02AE0C006E3B2F /* ProgressLineView.swift */; };
 		AFD956351EF4578800BDE063 /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD956341EF4578800BDE063 /* ProgressCircleView.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +57,9 @@
 		AF5CA1941EF2E1A2009358EB /* BeeHiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeeHiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5CA1981EF2E1A2009358EB /* BeeHiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeeHiveUITests.swift; sourceTree = "<group>"; };
 		AF5CA19A1EF2E1A2009358EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF7B68411F02A8CB006E3B2F /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
+		AF7B68451F02A906006E3B2F /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
+		AF7B68491F02AE0C006E3B2F /* ProgressLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressLineView.swift; sourceTree = "<group>"; };
 		AFD956341EF4578800BDE063 /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +111,7 @@
 		AF5CA1771EF2E1A2009358EB /* BeeHive */ = {
 			isa = PBXGroup;
 			children = (
+				AF7B68401F02A89D006E3B2F /* Tasks */,
 				AFD956331EF4572000BDE063 /* UIControls */,
 				AF5CA1781EF2E1A2009358EB /* AppDelegate.swift */,
 				AF5CA17A1EF2E1A2009358EB /* ViewController.swift */,
@@ -128,10 +141,20 @@
 			path = BeeHiveUITests;
 			sourceTree = "<group>";
 		};
+		AF7B68401F02A89D006E3B2F /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				AF7B68411F02A8CB006E3B2F /* TasksTableViewController.swift */,
+				AF7B68451F02A906006E3B2F /* TasksTableViewCell.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
 		AFD956331EF4572000BDE063 /* UIControls */ = {
 			isa = PBXGroup;
 			children = (
 				AFD956341EF4578800BDE063 /* ProgressCircleView.swift */,
+				AF7B68491F02AE0C006E3B2F /* ProgressLineView.swift */,
 			);
 			path = UIControls;
 			sourceTree = "<group>";
@@ -268,7 +291,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF5CA17B1EF2E1A2009358EB /* ViewController.swift in Sources */,
+				AF7B68461F02A906006E3B2F /* TasksTableViewCell.swift in Sources */,
 				AF5CA1791EF2E1A2009358EB /* AppDelegate.swift in Sources */,
+				AF7B684A1F02AE0C006E3B2F /* ProgressLineView.swift in Sources */,
+				AF7B68421F02A8CB006E3B2F /* TasksTableViewController.swift in Sources */,
 				AFD956351EF4578800BDE063 /* ProgressCircleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,7 +303,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF7B68471F02A906006E3B2F /* TasksTableViewCell.swift in Sources */,
+				AF7B68431F02A8CB006E3B2F /* TasksTableViewController.swift in Sources */,
 				AF5CA18E1EF2E1A2009358EB /* BeeHiveTests.swift in Sources */,
+				AF7B684B1F02AE0C006E3B2F /* ProgressLineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +314,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF7B68481F02A906006E3B2F /* TasksTableViewCell.swift in Sources */,
+				AF7B68441F02A8CB006E3B2F /* TasksTableViewController.swift in Sources */,
 				AF5CA1991EF2E1A2009358EB /* BeeHiveUITests.swift in Sources */,
+				AF7B684C1F02AE0C006E3B2F /* ProgressLineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

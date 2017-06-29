@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6hC-xX-n0C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6hC-xX-n0C">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,24 +21,21 @@
                         <viewControllerLayoutGuide type="bottom" id="5NN-XD-uJ2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ekp-ag-1G1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Db5-zN-YRH" userLabel="TopView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N5P-Z7-SOB" customClass="ProgressCircleView" customModule="BeeHive" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="210" height="149"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="N5P-Z7-SOB" secondAttribute="height" multiplier="169:120" id="IZy-OP-ctC"/>
-                                        </constraints>
+                                        <rect key="frame" x="10" y="10" width="251" height="215.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="labelFontSize">
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="labelColor">
-                                                <color key="value" red="0.94898933169999999" green="0.37117382879999999" blue="0.14088433980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" red="0.95272701979999996" green="0.42709833380000001" blue="0.26422321799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="backgroundCircleTransparancy">
                                                 <real key="value" value="0.5"/>
@@ -54,10 +53,10 @@
                                                 <integer key="value" value="40"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="percentComplete">
-                                                <integer key="value" value="75"/>
+                                                <integer key="value" value="67"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
-                                                <color key="value" red="0.94898933169999999" green="0.37117382879999999" blue="0.14088433980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" red="0.95272701979999996" green="0.42709833380000001" blue="0.26422321799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="bgCircleColor">
                                                 <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,13 +71,14 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="N5P-Z7-SOB" secondAttribute="bottom" constant="82" id="5KI-1o-w2g"/>
-                                    <constraint firstItem="N5P-Z7-SOB" firstAttribute="leading" secondItem="Db5-zN-YRH" secondAttribute="leading" constant="10" id="XMF-Wr-luX"/>
-                                    <constraint firstItem="N5P-Z7-SOB" firstAttribute="top" secondItem="Db5-zN-YRH" secondAttribute="top" constant="10" id="wL7-el-9QZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="N5P-Z7-SOB" secondAttribute="bottom" constant="41.5" id="BQr-12-C8f"/>
+                                    <constraint firstItem="N5P-Z7-SOB" firstAttribute="top" secondItem="Db5-zN-YRH" secondAttribute="top" constant="10" id="iN9-KZ-Nny"/>
+                                    <constraint firstAttribute="trailing" secondItem="N5P-Z7-SOB" secondAttribute="trailing" constant="114" id="lW2-A5-wtX"/>
+                                    <constraint firstItem="N5P-Z7-SOB" firstAttribute="leading" secondItem="Db5-zN-YRH" secondAttribute="leading" constant="10" id="ssq-T6-yJf"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wy7-5q-MKZ">
-                                <rect key="frame" x="0.0" y="241" width="375" height="242"/>
+                                <rect key="frame" x="0.0" y="267" width="375" height="266.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QNz-h5-TCO">
                                     <size key="itemSize" width="50" height="50"/>
@@ -98,7 +98,7 @@
                                 </cells>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYz-KS-8Q9">
-                                <rect key="frame" x="0.0" y="483" width="375" height="121"/>
+                                <rect key="frame" x="0.0" y="533.5" width="375" height="133.5"/>
                                 <color key="backgroundColor" red="1" green="0.85021957319999997" blue="0.1083996668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -125,36 +125,69 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vo1-jL-DH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-308" y="-73.313343328335833"/>
+            <point key="canvasLocation" x="-309.375" y="-73.75"/>
         </scene>
-        <!--Tasks-->
-        <scene sceneID="YRM-fa-XHZ">
+        <!--Tasks Table View Controller-->
+        <scene sceneID="8rd-m0-Hoq">
             <objects>
-                <tableViewController id="pQc-jc-BWe" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="WpV-9E-0fm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="QXv-Ua-hWX" customClass="TasksTableViewController" customModule="BeeHive" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="luw-W5-Cfd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="CSA-Ek-dOl">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tasksCell" id="OED-pe-yuK" customClass="TasksTableViewCell" customModule="BeeHive" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CSA-Ek-dOl" id="q6z-vq-wsL">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OED-pe-yuK" id="Hde-gs-8Yy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xl-8K-WlY" customClass="ProgressLineView" customModule="BeeHive" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="150"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="32c-cX-JE1">
+                                            <rect key="frame" x="61" y="44" width="306" height="97"/>
+                                            <color key="backgroundColor" red="0.28001528980000001" green="0.85423451660000005" blue="0.34582722189999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld8-uA-Da6">
+                                            <rect key="frame" x="83" y="15" width="284" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Ld8-uA-Da6" firstAttribute="top" secondItem="Hde-gs-8Yy" secondAttribute="topMargin" constant="7" id="4CG-84-c3v"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="32c-cX-JE1" secondAttribute="bottom" constant="0.5" id="EZ5-6d-BYc"/>
+                                        <constraint firstItem="32c-cX-JE1" firstAttribute="leading" secondItem="0Xl-8K-WlY" secondAttribute="leadingMargin" constant="53" id="I5L-1g-yRy"/>
+                                        <constraint firstItem="0Xl-8K-WlY" firstAttribute="top" secondItem="Hde-gs-8Yy" secondAttribute="top" id="JFh-0X-vts"/>
+                                        <constraint firstItem="Ld8-uA-Da6" firstAttribute="leading" secondItem="0Xl-8K-WlY" secondAttribute="trailing" constant="23" id="OLk-33-34d"/>
+                                        <constraint firstItem="32c-cX-JE1" firstAttribute="trailing" secondItem="Ld8-uA-Da6" secondAttribute="trailing" id="TpD-dK-QZX"/>
+                                        <constraint firstItem="Ld8-uA-Da6" firstAttribute="trailing" secondItem="Hde-gs-8Yy" secondAttribute="trailingMargin" id="Ut8-1C-mVu"/>
+                                        <constraint firstItem="0Xl-8K-WlY" firstAttribute="leading" secondItem="Hde-gs-8Yy" secondAttribute="leading" id="YmY-ck-KXf"/>
+                                        <constraint firstAttribute="bottom" secondItem="0Xl-8K-WlY" secondAttribute="bottom" id="fof-v7-T2D"/>
+                                        <constraint firstItem="32c-cX-JE1" firstAttribute="top" secondItem="Ld8-uA-Da6" secondAttribute="bottom" constant="8" id="gtF-sd-5hi"/>
+                                        <constraint firstItem="32c-cX-JE1" firstAttribute="leading" secondItem="Ld8-uA-Da6" secondAttribute="leading" constant="-22" id="wFg-VO-tWg"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="progressHeaderView" destination="0Xl-8K-WlY" id="PFl-Vl-gqr"/>
+                                    <outlet property="taskLabel" destination="Ld8-uA-Da6" id="MaH-je-dPO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="pQc-jc-BWe" id="sgd-WF-WGO"/>
-                            <outlet property="delegate" destination="pQc-jc-BWe" id="4CL-0S-OHT"/>
+                            <outlet property="dataSource" destination="QXv-Ua-hWX" id="L5s-cT-gAj"/>
+                            <outlet property="delegate" destination="QXv-Ua-hWX" id="x4o-VV-Zrc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tasks" id="KhT-SI-Cj1"/>
+                    <navigationItem key="navigationItem" id="wPc-XD-5La"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CVK-F4-4bw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hM4-vj-KK3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="612" y="-64"/>
+            <point key="canvasLocation" x="541.60000000000002" y="-71.514242878560722"/>
         </scene>
         <!--BeeHive-->
         <scene sceneID="9H6-tV-FML">
@@ -164,13 +197,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="M8f-GH-fvp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.94898933169999999" green="0.37117382879999999" blue="0.14088433980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.95272701978683472" green="0.42709833383560181" blue="0.26422321796417236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="vkK-mr-Hm2" kind="relationship" relationship="rootViewController" id="AAK-S8-KMm"/>
+                        <segue destination="QXv-Ua-hWX" kind="relationship" relationship="rootViewController" id="9NO-yl-OLC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Za-0t-l7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
