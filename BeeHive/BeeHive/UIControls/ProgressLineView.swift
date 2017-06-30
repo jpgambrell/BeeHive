@@ -36,6 +36,7 @@ class ProgressLineView: UIView {
     var lineLayer : CAShapeLayer!
     var circleLayer : CAShapeLayer!
     var type: ProgressLineViewType = .Other
+    var typeImage : UIImageView!
     
     func setupLayers() {
         lineLayer = CAShapeLayer()
@@ -43,6 +44,12 @@ class ProgressLineView: UIView {
         
         circleLayer = CAShapeLayer()
         layer.addSublayer(circleLayer)
+        
+        typeImage = UIImageView.init(image: UIImage(named: "truck"))
+        typeImage.contentMode = .scaleAspectFit
+        
+        layer.addSublayer(typeImage.layer)
+        
     }
     
     func setupInitialView(cellType: ProgressLineViewType){
@@ -61,19 +68,6 @@ class ProgressLineView: UIView {
     override func draw(_ rect: CGRect) {
         let linePath = UIBezierPath()
         lineLayer.lineWidth = 10
-       // lineLayer.strokeColor = UIColor.blue.cgColor
-        
-//        CAGradientLayer *gradientLayer = [CAGradientLayer layer];
-//        gradientLayer.frame = self.view.frame;
-//        gradientLayer.colors = @[(__bridge id)[UIColor redColor].CGColor,(__bridge id)[UIColor blueColor].CGColor ];
-//        gradientLayer.startPoint = CGPointMake(0,0.5);
-//        gradientLayer.endPoint = CGPointMake(1,0.5);
-//
-//        [self.view.layer addSublayer:gradientLayer];
-        
-        
-        
-        
         
         let xPos = frame.midX
         let yPosSet = type.calculateYPositionsForLine(bounds: bounds)
@@ -83,21 +77,19 @@ class ProgressLineView: UIView {
         linePath.stroke()
         lineLayer.path = linePath.cgPath
         
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = frame
+        let arcCenterPoint = CGPoint(x:xPos, y:ceil(bounds.height/2))
         
-        gradientLayer.colors = [UIColor.red.cgColor, UIColor.green.cgColor]
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
-        gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
-        gradientLayer.mask = lineLayer
         
-        layer.addSublayer(gradientLayer)
+        let circlePath = UIBezierPath(arcCenter: arcCenterPoint, radius: 15, startAngle: 0, endAngle: 360, clockwise: true)
+        circlePath.stroke()
+        circleLayer.strokeColor = UIColor.blue.cgColor
+        //circleLayer.fillColor = type == .Footer ? UIColor.white.cgColor : UIColor.green.cgColor
+        circleLayer.fillColor = UIColor.white.cgColor
+        circleLayer.lineWidth = 1
+        circleLayer.path = circlePath.cgPath
         
-//        let circlePath = UIBezierPath(arcCenter: CGPoint(x:xPos, y:ceil(bounds.height/2)), radius: 8, startAngle: 0, endAngle: 360, clockwise: true)
-//        circlePath.stroke()
-//        circleLayer.strokeColor = UIColor.blue.cgColor
-//        circleLayer.fillColor = type == .Footer ? UIColor.white.cgColor : UIColor.green.cgColor
-//        circleLayer.lineWidth = 1
-//        circleLayer.path = circlePath.cgPath
+        typeImage.frame = CGRect(origin: CGPoint(x: arcCenterPoint.x - 8.0, y:arcCenterPoint.y - 5.0), size: CGSize(width: 16, height: 10))
+        //typeImage.frame = CGRect(origin:arcCenterPoint , size: CGSize(width: 32, height: 20))
+        
     }
 }

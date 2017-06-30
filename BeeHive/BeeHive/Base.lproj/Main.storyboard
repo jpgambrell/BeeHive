@@ -131,45 +131,44 @@
         <scene sceneID="8rd-m0-Hoq">
             <objects>
                 <tableViewController id="QXv-Ua-hWX" customClass="TasksTableViewController" customModule="BeeHive" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="luw-W5-Cfd">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" id="luw-W5-Cfd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tasksCell" id="OED-pe-yuK" customClass="TasksTableViewCell" customModule="BeeHive" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OED-pe-yuK" id="Hde-gs-8Yy">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xl-8K-WlY" customClass="ProgressLineView" customModule="BeeHive" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="60" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="110"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="32c-cX-JE1">
-                                            <rect key="frame" x="61" y="44" width="306" height="97"/>
-                                            <color key="backgroundColor" red="0.28001528980000001" green="0.85423451660000005" blue="0.34582722189999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld8-uA-Da6">
-                                            <rect key="frame" x="83" y="15" width="284" height="21"/>
+                                            <rect key="frame" x="61" y="0.0" width="306" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="32c-cX-JE1">
+                                            <rect key="frame" x="61" y="18" width="314" height="92"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Ld8-uA-Da6" firstAttribute="top" secondItem="Hde-gs-8Yy" secondAttribute="topMargin" constant="7" id="4CG-84-c3v"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="32c-cX-JE1" secondAttribute="bottom" constant="0.5" id="EZ5-6d-BYc"/>
+                                        <constraint firstItem="Ld8-uA-Da6" firstAttribute="top" secondItem="Hde-gs-8Yy" secondAttribute="topMargin" constant="-8" id="4CG-84-c3v"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="32c-cX-JE1" secondAttribute="bottom" constant="-8.5" id="EZ5-6d-BYc"/>
                                         <constraint firstItem="32c-cX-JE1" firstAttribute="leading" secondItem="0Xl-8K-WlY" secondAttribute="leadingMargin" constant="53" id="I5L-1g-yRy"/>
                                         <constraint firstItem="0Xl-8K-WlY" firstAttribute="top" secondItem="Hde-gs-8Yy" secondAttribute="top" id="JFh-0X-vts"/>
-                                        <constraint firstItem="Ld8-uA-Da6" firstAttribute="leading" secondItem="0Xl-8K-WlY" secondAttribute="trailing" constant="23" id="OLk-33-34d"/>
-                                        <constraint firstItem="32c-cX-JE1" firstAttribute="trailing" secondItem="Ld8-uA-Da6" secondAttribute="trailing" id="TpD-dK-QZX"/>
+                                        <constraint firstItem="Ld8-uA-Da6" firstAttribute="leading" secondItem="0Xl-8K-WlY" secondAttribute="trailing" constant="1" id="OLk-33-34d"/>
+                                        <constraint firstItem="32c-cX-JE1" firstAttribute="trailing" secondItem="Ld8-uA-Da6" secondAttribute="trailing" constant="8" id="TpD-dK-QZX"/>
                                         <constraint firstItem="Ld8-uA-Da6" firstAttribute="trailing" secondItem="Hde-gs-8Yy" secondAttribute="trailingMargin" id="Ut8-1C-mVu"/>
                                         <constraint firstItem="0Xl-8K-WlY" firstAttribute="leading" secondItem="Hde-gs-8Yy" secondAttribute="leading" id="YmY-ck-KXf"/>
                                         <constraint firstAttribute="bottom" secondItem="0Xl-8K-WlY" secondAttribute="bottom" id="fof-v7-T2D"/>
-                                        <constraint firstItem="32c-cX-JE1" firstAttribute="top" secondItem="Ld8-uA-Da6" secondAttribute="bottom" constant="8" id="gtF-sd-5hi"/>
-                                        <constraint firstItem="32c-cX-JE1" firstAttribute="leading" secondItem="Ld8-uA-Da6" secondAttribute="leading" constant="-22" id="wFg-VO-tWg"/>
+                                        <constraint firstItem="32c-cX-JE1" firstAttribute="top" secondItem="Ld8-uA-Da6" secondAttribute="bottom" constant="-2" id="gtF-sd-5hi"/>
+                                        <constraint firstItem="32c-cX-JE1" firstAttribute="leading" secondItem="Ld8-uA-Da6" secondAttribute="leading" id="wFg-VO-tWg"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
