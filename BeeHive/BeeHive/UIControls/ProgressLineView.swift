@@ -80,12 +80,16 @@ class ProgressLineView: UIView {
         let arcCenterPoint = CGPoint(x:xPos, y:ceil(bounds.height/2))
         
         
-        let circlePath = UIBezierPath(arcCenter: arcCenterPoint, radius: 15, startAngle: 0, endAngle: 360, clockwise: true)
+        let circlePath = UIBezierPath(arcCenter: arcCenterPoint, radius: 20-4, startAngle: CGFloat(0).toRadians(), endAngle: CGFloat(360).toRadians(), clockwise: true)
+       // let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0),
+                                   //   radius: (min(bounds.width, bounds.height) - (strokeWidth * 2))/2, startAngle: CGFloat(-90).toRadians(), endAngle: CGFloat(270).toRadians(), clockwise: true)
+        
+        
         circlePath.stroke()
-        circleLayer.strokeColor = UIColor.blue.cgColor
+        circleLayer.strokeColor = UIColor.black.cgColor
         //circleLayer.fillColor = type == .Footer ? UIColor.white.cgColor : UIColor.green.cgColor
         circleLayer.fillColor = UIColor.white.cgColor
-        circleLayer.lineWidth = 1
+        circleLayer.lineWidth = 2
         circleLayer.path = circlePath.cgPath
         
         typeImage.frame = CGRect(origin: CGPoint(x: arcCenterPoint.x - 8.0, y:arcCenterPoint.y - 5.0), size: CGSize(width: 16, height: 10))
