@@ -22,14 +22,6 @@ enum ProgressLineViewType {
             return [0, bounds.height]
         }
     }
-//    func calculateYPositionForCircle(bounds: CGRect) -> CGFloat {
-//        switch self {
-//        case .Header, .Footer:
-//            return bounds.height/2
-//        case .Other:
-//            return 0
-//        }
-//    }
 }
 
 class ProgressLineView: UIView {
@@ -81,9 +73,6 @@ class ProgressLineView: UIView {
         
         
         let circlePath = UIBezierPath(arcCenter: arcCenterPoint, radius: 20-4, startAngle: CGFloat(0).toRadians(), endAngle: CGFloat(360).toRadians(), clockwise: true)
-       // let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0),
-                                   //   radius: (min(bounds.width, bounds.height) - (strokeWidth * 2))/2, startAngle: CGFloat(-90).toRadians(), endAngle: CGFloat(270).toRadians(), clockwise: true)
-        
         
         circlePath.stroke()
         circleLayer.strokeColor = UIColor.black.cgColor
@@ -93,7 +82,5 @@ class ProgressLineView: UIView {
         circleLayer.path = circlePath.cgPath
         
         typeImage.frame = CGRect(origin: CGPoint(x: arcCenterPoint.x - 8.0, y:arcCenterPoint.y - 5.0), size: CGSize(width: 16, height: 10))
-        //typeImage.frame = CGRect(origin:arcCenterPoint , size: CGSize(width: 32, height: 20))
-        
     }
 }

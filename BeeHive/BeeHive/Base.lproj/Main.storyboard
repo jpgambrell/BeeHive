@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -80,6 +79,11 @@
                                 <rect key="frame" x="0.0" y="534.5" width="375" height="133.5"/>
                                 <color key="backgroundColor" red="1" green="0.85021957319999997" blue="0.1083996668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TbL-Od-SdX" customClass="ProgressLineView" customModule="BeeHive" customModuleProvider="target">
+                                <rect key="frame" x="62" y="330" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -106,44 +110,44 @@
         <scene sceneID="8rd-m0-Hoq">
             <objects>
                 <tableViewController id="QXv-Ua-hWX" customClass="TasksTableViewController" customModule="BeeHive" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" id="luw-W5-Cfd">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" id="luw-W5-Cfd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tasksCell" id="OED-pe-yuK" customClass="TasksTableViewCell" customModule="BeeHive" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="110"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mapTaskCell" id="OED-pe-yuK" customClass="MapTaskCell" customModule="BeeHive" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OED-pe-yuK" id="Hde-gs-8Yy">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xl-8K-WlY" customClass="ProgressLineView" customModule="BeeHive" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="60" height="110"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="200"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="bT7-M6-pmY"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld8-uA-Da6">
-                                            <rect key="frame" x="60" y="5" width="315" height="20"/>
+                                            <rect key="frame" x="60" y="5" width="315" height="25"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="20" id="FIK-ag-r1X"/>
+                                                <constraint firstAttribute="height" constant="25" id="FIK-ag-r1X"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-ik-OcU">
-                                            <rect key="frame" x="60" y="30" width="307" height="50"/>
+                                            <rect key="frame" x="60" y="31" width="307" height="135"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="Cff-Bp-wtm"/>
+                                                <constraint firstAttribute="height" constant="135" id="Cff-Bp-wtm"/>
                                             </constraints>
                                         </mapView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHj-7u-I4R">
-                                            <rect key="frame" x="60" y="85" width="307" height="20"/>
+                                            <rect key="frame" x="60" y="167" width="307" height="25"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="20" id="9Fv-Aj-jZl"/>
+                                                <constraint firstAttribute="height" constant="25" id="9Fv-Aj-jZl"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                             <nil key="textColor"/>
@@ -153,10 +157,10 @@
                                     <constraints>
                                         <constraint firstItem="kBy-ik-OcU" firstAttribute="leading" secondItem="0Xl-8K-WlY" secondAttribute="trailing" id="3aR-qD-9Lj"/>
                                         <constraint firstItem="kBy-ik-OcU" firstAttribute="trailing" secondItem="Hde-gs-8Yy" secondAttribute="trailingMargin" id="9xr-6S-FoW"/>
-                                        <constraint firstItem="kBy-ik-OcU" firstAttribute="top" secondItem="Ld8-uA-Da6" secondAttribute="bottom" constant="5" id="Gr2-ok-eX0"/>
+                                        <constraint firstItem="kBy-ik-OcU" firstAttribute="top" secondItem="Ld8-uA-Da6" secondAttribute="bottom" constant="1" id="Gr2-ok-eX0"/>
                                         <constraint firstAttribute="bottom" secondItem="0Xl-8K-WlY" secondAttribute="bottom" id="QYO-Z2-HfF"/>
                                         <constraint firstItem="Ld8-uA-Da6" firstAttribute="top" secondItem="Hde-gs-8Yy" secondAttribute="top" constant="5" id="RrR-ca-tWc"/>
-                                        <constraint firstItem="bHj-7u-I4R" firstAttribute="top" secondItem="kBy-ik-OcU" secondAttribute="bottom" constant="5" id="TJV-qL-Aah"/>
+                                        <constraint firstItem="bHj-7u-I4R" firstAttribute="top" secondItem="kBy-ik-OcU" secondAttribute="bottom" constant="1" id="TJV-qL-Aah"/>
                                         <constraint firstItem="bHj-7u-I4R" firstAttribute="trailing" secondItem="Hde-gs-8Yy" secondAttribute="trailingMargin" id="UYU-aq-ycC"/>
                                         <constraint firstItem="Ld8-uA-Da6" firstAttribute="leading" secondItem="0Xl-8K-WlY" secondAttribute="trailing" id="aIg-s5-Zjy"/>
                                         <constraint firstItem="0Xl-8K-WlY" firstAttribute="top" secondItem="Hde-gs-8Yy" secondAttribute="top" id="aJc-7D-oss"/>
@@ -166,6 +170,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="mapView" destination="kBy-ik-OcU" id="ous-xr-3Uv"/>
                                     <outlet property="progressHeaderView" destination="0Xl-8K-WlY" id="PFl-Vl-gqr"/>
                                     <outlet property="taskLabel" destination="Ld8-uA-Da6" id="MaH-je-dPO"/>
                                 </connections>

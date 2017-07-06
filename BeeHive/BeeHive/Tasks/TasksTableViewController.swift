@@ -9,7 +9,8 @@
 import UIKit
 
 class TasksTableViewController: UITableViewController {
-let taskData = ["Go to Store", "Buy Office Supplies", "Upload reciept", "Return to Office"]
+//let taskData = ["Go to Store", "Buy Office Supplies", "Upload reciept", "Return to Office"]
+    let taskData = ["Go to Store"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,9 +38,9 @@ let taskData = ["Go to Store", "Buy Office Supplies", "Upload reciept", "Return 
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> TasksTableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "tasksCell", for: indexPath) as? TasksTableViewCell else {
-            return TasksTableViewCell()
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> MapTaskCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "mapTaskCell", for: indexPath) as? MapTaskCell else {
+            return MapTaskCell()
         }
         
         if indexPath.row == 0 {

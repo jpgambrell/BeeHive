@@ -17,9 +17,9 @@
 		AF7B68421F02A8CB006E3B2F /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68411F02A8CB006E3B2F /* TasksTableViewController.swift */; };
 		AF7B68431F02A8CB006E3B2F /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68411F02A8CB006E3B2F /* TasksTableViewController.swift */; };
 		AF7B68441F02A8CB006E3B2F /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68411F02A8CB006E3B2F /* TasksTableViewController.swift */; };
-		AF7B68461F02A906006E3B2F /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68451F02A906006E3B2F /* TasksTableViewCell.swift */; };
-		AF7B68471F02A906006E3B2F /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68451F02A906006E3B2F /* TasksTableViewCell.swift */; };
-		AF7B68481F02A906006E3B2F /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68451F02A906006E3B2F /* TasksTableViewCell.swift */; };
+		AF7B68461F02A906006E3B2F /* MapTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68451F02A906006E3B2F /* MapTaskCell.swift */; };
+		AF7B68471F02A906006E3B2F /* MapTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68451F02A906006E3B2F /* MapTaskCell.swift */; };
+		AF7B68481F02A906006E3B2F /* MapTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68451F02A906006E3B2F /* MapTaskCell.swift */; };
 		AF7B684A1F02AE0C006E3B2F /* ProgressLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68491F02AE0C006E3B2F /* ProgressLineView.swift */; };
 		AF7B684B1F02AE0C006E3B2F /* ProgressLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68491F02AE0C006E3B2F /* ProgressLineView.swift */; };
 		AF7B684C1F02AE0C006E3B2F /* ProgressLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68491F02AE0C006E3B2F /* ProgressLineView.swift */; };
@@ -58,7 +58,7 @@
 		AF5CA1981EF2E1A2009358EB /* BeeHiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeeHiveUITests.swift; sourceTree = "<group>"; };
 		AF5CA19A1EF2E1A2009358EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF7B68411F02A8CB006E3B2F /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
-		AF7B68451F02A906006E3B2F /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
+		AF7B68451F02A906006E3B2F /* MapTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTaskCell.swift; sourceTree = "<group>"; };
 		AF7B68491F02AE0C006E3B2F /* ProgressLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressLineView.swift; sourceTree = "<group>"; };
 		AFD956341EF4578800BDE063 /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				AF7B68411F02A8CB006E3B2F /* TasksTableViewController.swift */,
-				AF7B68451F02A906006E3B2F /* TasksTableViewCell.swift */,
+				AF7B68451F02A906006E3B2F /* MapTaskCell.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -291,7 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF5CA17B1EF2E1A2009358EB /* ViewController.swift in Sources */,
-				AF7B68461F02A906006E3B2F /* TasksTableViewCell.swift in Sources */,
+				AF7B68461F02A906006E3B2F /* MapTaskCell.swift in Sources */,
 				AF5CA1791EF2E1A2009358EB /* AppDelegate.swift in Sources */,
 				AF7B684A1F02AE0C006E3B2F /* ProgressLineView.swift in Sources */,
 				AF7B68421F02A8CB006E3B2F /* TasksTableViewController.swift in Sources */,
@@ -303,7 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF7B68471F02A906006E3B2F /* TasksTableViewCell.swift in Sources */,
+				AF7B68471F02A906006E3B2F /* MapTaskCell.swift in Sources */,
 				AF7B68431F02A8CB006E3B2F /* TasksTableViewController.swift in Sources */,
 				AF5CA18E1EF2E1A2009358EB /* BeeHiveTests.swift in Sources */,
 				AF7B684B1F02AE0C006E3B2F /* ProgressLineView.swift in Sources */,
@@ -314,7 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF7B68481F02A906006E3B2F /* TasksTableViewCell.swift in Sources */,
+				AF7B68481F02A906006E3B2F /* MapTaskCell.swift in Sources */,
 				AF7B68441F02A8CB006E3B2F /* TasksTableViewController.swift in Sources */,
 				AF5CA1991EF2E1A2009358EB /* BeeHiveUITests.swift in Sources */,
 				AF7B684C1F02AE0C006E3B2F /* ProgressLineView.swift in Sources */,
@@ -404,7 +404,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -455,7 +455,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
