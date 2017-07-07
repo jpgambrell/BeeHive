@@ -10,7 +10,8 @@ import UIKit
 import MapKit
 
 class MapTaskCell: UITableViewCell, MKMapViewDelegate {
-
+    @IBOutlet weak var mapImgView: UIImageView!
+    
     @IBOutlet weak var progressHeaderView: ProgressLineView!
     @IBOutlet weak var taskLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
@@ -19,6 +20,8 @@ class MapTaskCell: UITableViewCell, MKMapViewDelegate {
         mapView.delegate = self
         // Initialization code
         
+        mapImgView.layer.cornerRadius = mapImgView.frame.size.width / 2
+        mapImgView.clipsToBounds = true
         setupMapView()
     }
     
@@ -34,10 +37,10 @@ class MapTaskCell: UITableViewCell, MKMapViewDelegate {
 //            self.locationMapView.setRegion(coordinateRegion, animated: true)
 //            //self.locationMapView
 //        }
-        let sourceLocation = CLLocation(latitude: 33.066227, longitude:  -96.824135) //classic bmw
+       // let sourceLocation = CLLocation(latitude: 33.066227, longitude:  -96.824135) //classic bmw
       //  let sourceLocation = CLLocation(latitude: 33.006367, longitude:  -96.97226) //Vista Ridge mall
        // let sourceLocation = CLLocation(latitude: 33.070732, longitude: -96.79762) //JCP
-       //let sourceLocation = CLLocation(latitude: +32.882675, longitude: -96.87463) //Pensive
+        let sourceLocation = CLLocation(latitude: +32.882675, longitude: -96.87463) //Pensive
         let destinationLocation = CLLocation(latitude: +33.06470690, longitude: -96.79690030)
         
         let sourcePlacemark = MKPlacemark(coordinate: sourceLocation.coordinate, addressDictionary: nil)
@@ -98,25 +101,20 @@ class MapTaskCell: UITableViewCell, MKMapViewDelegate {
             var regionRect = route.polyline.boundingMapRect
             
             
-            let wPadding = regionRect.size.width * 0
-            let hPadding = regionRect.size.height * 1.2
+            let wPadding = regionRect.size.width * 0.45
+            let hPadding = regionRect.size.height * 0.6
             
             //Add padding to the region
             regionRect.size.width += wPadding
             regionRect.size.height += hPadding
             
             //Center the region on the line
-         //   regionRect.origin.x -= wPadding / 2
-            regionRect.origin.y -= hPadding / 1.5
+            regionRect.origin.x -= wPadding / 2
+           regionRect.origin.y += 100//hPadding / 4
             self.mapView.setRegion(MKCoordinateRegionForMapRect(regionRect), animated: false)
-//             self.mapView.setRegion(MKCoordinateRegionForMapRect(MKMapRect(origin: rect.origin, size: MKMapSize(width: rect.size.width * 3, height: rect.size.height / 2))), animated: false)
-            
-            
         }
         
     }
-    
-    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -131,5 +129,22 @@ class MapTaskCell: UITableViewCell, MKMapViewDelegate {
         
         return renderer
     }
+    func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
+        delay(1.0){
+         self.mapImgView.image = UIImage(view: self.mapView)
+    }
+        
+        
+    }
     
+}
+
+extension UIImage {
+    convenience init(view: UIView) {
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        self.init(cgImage: (image?.cgImage)!)
+    }
 }

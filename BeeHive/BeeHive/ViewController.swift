@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         
-        delay(1.0) {
+        self.delay(1.0) {
             self.tasksProgressCircleView.animateCircle(duration: Double(self.tasksProgressCircleView.percentComplete / 100))
         }
     }
@@ -32,11 +32,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func delay(_ seconds: Double, completion: @escaping ()->Void) {
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .milliseconds(Int(seconds * 1000.0))) {
-            completion()
-        }
-    }
+    
 
+}
+extension NSObject {
+func delay(_ seconds: Double, completion: @escaping ()->Void) {
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .milliseconds(Int(seconds * 1000.0))) {
+        completion()
+    }
+}
 }
 

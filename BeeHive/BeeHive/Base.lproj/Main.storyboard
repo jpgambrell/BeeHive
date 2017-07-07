@@ -139,7 +139,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-ik-OcU">
-                                            <rect key="frame" x="60" y="31" width="307" height="135"/>
+                                            <rect key="frame" x="60" y="31" width="135" height="135"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="135" id="Cff-Bp-wtm"/>
                                             </constraints>
@@ -153,10 +153,15 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="truck" translatesAutoresizingMaskIntoConstraints="NO" id="TNI-Aa-b8L">
+                                            <rect key="frame" x="203" y="25" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.28001528980000001" green="0.85423451660000005" blue="0.34582722189999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="kBy-ik-OcU" firstAttribute="leading" secondItem="0Xl-8K-WlY" secondAttribute="trailing" id="3aR-qD-9Lj"/>
-                                        <constraint firstItem="kBy-ik-OcU" firstAttribute="trailing" secondItem="Hde-gs-8Yy" secondAttribute="trailingMargin" id="9xr-6S-FoW"/>
+                                        <constraint firstItem="kBy-ik-OcU" firstAttribute="trailing" secondItem="Hde-gs-8Yy" secondAttribute="trailingMargin" constant="-172" id="9xr-6S-FoW"/>
                                         <constraint firstItem="kBy-ik-OcU" firstAttribute="top" secondItem="Ld8-uA-Da6" secondAttribute="bottom" constant="1" id="Gr2-ok-eX0"/>
                                         <constraint firstAttribute="bottom" secondItem="0Xl-8K-WlY" secondAttribute="bottom" id="QYO-Z2-HfF"/>
                                         <constraint firstItem="Ld8-uA-Da6" firstAttribute="top" secondItem="Hde-gs-8Yy" secondAttribute="top" constant="5" id="RrR-ca-tWc"/>
@@ -170,6 +175,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="mapImgView" destination="TNI-Aa-b8L" id="Iaa-xb-kPR"/>
                                     <outlet property="mapView" destination="kBy-ik-OcU" id="ous-xr-3Uv"/>
                                     <outlet property="progressHeaderView" destination="0Xl-8K-WlY" id="PFl-Vl-gqr"/>
                                     <outlet property="taskLabel" destination="Ld8-uA-Da6" id="MaH-je-dPO"/>
@@ -209,4 +215,7 @@
             <point key="canvasLocation" x="-1129" y="-81"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="truck" width="16" height="10"/>
+    </resources>
 </document>
