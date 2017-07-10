@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF59C3921F140FB8008551E1 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF59C3911F140FB8008551E1 /* TaskListViewController.swift */; };
 		AF5CA1791EF2E1A2009358EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5CA1781EF2E1A2009358EB /* AppDelegate.swift */; };
 		AF5CA17B1EF2E1A2009358EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5CA17A1EF2E1A2009358EB /* ViewController.swift */; };
 		AF5CA17E1EF2E1A2009358EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5CA17C1EF2E1A2009358EB /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF59C3911F140FB8008551E1 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		AF5CA1751EF2E1A2009358EB /* BeeHive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeeHive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5CA1781EF2E1A2009358EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF5CA17A1EF2E1A2009358EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				AF7B68411F02A8CB006E3B2F /* TasksTableViewController.swift */,
 				AF7B68451F02A906006E3B2F /* MapTaskCell.swift */,
+				AF59C3911F140FB8008551E1 /* TaskListViewController.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF59C3921F140FB8008551E1 /* TaskListViewController.swift in Sources */,
 				AF5CA17B1EF2E1A2009358EB /* ViewController.swift in Sources */,
 				AF7B68461F02A906006E3B2F /* MapTaskCell.swift in Sources */,
 				AF5CA1791EF2E1A2009358EB /* AppDelegate.swift in Sources */,
