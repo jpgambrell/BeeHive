@@ -35,11 +35,4 @@ class ViewController: UIViewController {
     
 
 }
-extension NSObject {
-func delay(_ seconds: Double, completion: @escaping ()->Void) {
-    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .milliseconds(Int(seconds * 1000.0))) {
-        completion()
-    }
-}
-}
 

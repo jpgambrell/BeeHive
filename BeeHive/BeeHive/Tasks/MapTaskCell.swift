@@ -10,18 +10,18 @@ import UIKit
 import MapKit
 
 class MapTaskCell: UITableViewCell, MKMapViewDelegate {
-    @IBOutlet weak var mapImgView: UIImageView!
+    //@IBOutlet weak var mapImgView: UIImageView!
     
     @IBOutlet weak var progressHeaderView: ProgressLineView!
     @IBOutlet weak var taskLabel: UILabel!
-    @IBOutlet weak var mapView: MKMapView!
+    var mapView = MKMapView()
     override func awakeFromNib() {
         super.awakeFromNib()
         mapView.delegate = self
         // Initialization code
         
-        mapImgView.layer.cornerRadius = mapImgView.frame.size.width / 2
-        mapImgView.clipsToBounds = true
+//        mapImgView.layer.cornerRadius = mapImgView.frame.size.width / 2
+//        mapImgView.clipsToBounds = true
         setupMapView()
     }
     
@@ -131,7 +131,7 @@ class MapTaskCell: UITableViewCell, MKMapViewDelegate {
     }
     func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
         delay(1.0){
-         self.mapImgView.image = UIImage(view: self.mapView)
+         //self.mapImgView.image = UIImage(view: self.mapView)
     }
         
         

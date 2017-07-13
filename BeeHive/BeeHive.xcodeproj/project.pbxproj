@@ -24,6 +24,8 @@
 		AF7B684A1F02AE0C006E3B2F /* ProgressLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68491F02AE0C006E3B2F /* ProgressLineView.swift */; };
 		AF7B684B1F02AE0C006E3B2F /* ProgressLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68491F02AE0C006E3B2F /* ProgressLineView.swift */; };
 		AF7B684C1F02AE0C006E3B2F /* ProgressLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B68491F02AE0C006E3B2F /* ProgressLineView.swift */; };
+		AFA205FA1F16BC6800C673C5 /* ClassExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA205F91F16BC6800C673C5 /* ClassExtensions.swift */; };
+		AFA205FC1F17FB6C00C673C5 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA205FB1F17FB6C00C673C5 /* NavigationViewController.swift */; };
 		AFD956351EF4578800BDE063 /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD956341EF4578800BDE063 /* ProgressCircleView.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		AF7B68411F02A8CB006E3B2F /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		AF7B68451F02A906006E3B2F /* MapTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTaskCell.swift; sourceTree = "<group>"; };
 		AF7B68491F02AE0C006E3B2F /* ProgressLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressLineView.swift; sourceTree = "<group>"; };
+		AFA205F91F16BC6800C673C5 /* ClassExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassExtensions.swift; sourceTree = "<group>"; };
+		AFA205FB1F17FB6C00C673C5 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		AFD956341EF4578800BDE063 /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +97,7 @@
 		AF5CA16C1EF2E1A2009358EB = {
 			isa = PBXGroup;
 			children = (
+				AFA205FB1F17FB6C00C673C5 /* NavigationViewController.swift */,
 				AF5CA1771EF2E1A2009358EB /* BeeHive */,
 				AF5CA18C1EF2E1A2009358EB /* BeeHiveTests */,
 				AF5CA1971EF2E1A2009358EB /* BeeHiveUITests */,
@@ -113,13 +118,14 @@
 		AF5CA1771EF2E1A2009358EB /* BeeHive */ = {
 			isa = PBXGroup;
 			children = (
+				AFA205F81F16BC3600C673C5 /* ClassExtensions */,
 				AF7B68401F02A89D006E3B2F /* Tasks */,
 				AFD956331EF4572000BDE063 /* UIControls */,
 				AF5CA1781EF2E1A2009358EB /* AppDelegate.swift */,
 				AF5CA17A1EF2E1A2009358EB /* ViewController.swift */,
 				AF5CA17C1EF2E1A2009358EB /* Main.storyboard */,
-				AF5CA17F1EF2E1A2009358EB /* Assets.xcassets */,
 				AF5CA1811EF2E1A2009358EB /* LaunchScreen.storyboard */,
+				AF5CA17F1EF2E1A2009358EB /* Assets.xcassets */,
 				AF5CA1841EF2E1A2009358EB /* Info.plist */,
 			);
 			path = BeeHive;
@@ -151,6 +157,14 @@
 				AF59C3911F140FB8008551E1 /* TaskListViewController.swift */,
 			);
 			path = Tasks;
+			sourceTree = "<group>";
+		};
+		AFA205F81F16BC3600C673C5 /* ClassExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				AFA205F91F16BC6800C673C5 /* ClassExtensions.swift */,
+			);
+			path = ClassExtensions;
 			sourceTree = "<group>";
 		};
 		AFD956331EF4572000BDE063 /* UIControls */ = {
@@ -296,9 +310,11 @@
 				AF59C3921F140FB8008551E1 /* TaskListViewController.swift in Sources */,
 				AF5CA17B1EF2E1A2009358EB /* ViewController.swift in Sources */,
 				AF7B68461F02A906006E3B2F /* MapTaskCell.swift in Sources */,
+				AFA205FC1F17FB6C00C673C5 /* NavigationViewController.swift in Sources */,
 				AF5CA1791EF2E1A2009358EB /* AppDelegate.swift in Sources */,
 				AF7B684A1F02AE0C006E3B2F /* ProgressLineView.swift in Sources */,
 				AF7B68421F02A8CB006E3B2F /* TasksTableViewController.swift in Sources */,
+				AFA205FA1F16BC6800C673C5 /* ClassExtensions.swift in Sources */,
 				AFD956351EF4578800BDE063 /* ProgressCircleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

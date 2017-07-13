@@ -193,7 +193,7 @@
             </objects>
             <point key="canvasLocation" x="2092" y="-208"/>
         </scene>
-        <!--Task List View Controller-->
+        <!--Job Tasks-->
         <scene sceneID="dma-26-kyb">
             <objects>
                 <viewController id="rk8-9h-WpD" customClass="TaskListViewController" customModule="BeeHive" customModuleProvider="target" sceneMemberID="viewController">
@@ -206,78 +206,106 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVl-uN-Lug">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
-                                <color key="backgroundColor" red="1" green="0.85021957319999997" blue="0.1083996668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="205"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1u-SJ-NxE">
+                                        <rect key="frame" x="30" y="10" width="315" height="185"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BRs-LT-nTb" customClass="ProgressCircleView" customModule="BeeHive" customModuleProvider="target">
+                                                <rect key="frame" x="70" y="8" width="175" height="169"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                                        <color key="value" red="0.96577936409999998" green="0.46538263559999998" blue="0.30591085550000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgCircleColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="bgCircleAlpha">
+                                                        <real key="value" value="0.69999999999999996"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="percentComplete">
+                                                        <integer key="value" value="70"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="labelColor">
+                                                        <color key="value" red="0.96577936409999998" green="0.46538263559999998" blue="0.30591085550000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="labelFontSize">
+                                                        <real key="value" value="14"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="BRs-LT-nTb" firstAttribute="centerY" secondItem="a1u-SJ-NxE" secondAttribute="centerY" id="QgP-E8-4Pt"/>
+                                            <constraint firstItem="BRs-LT-nTb" firstAttribute="centerX" secondItem="a1u-SJ-NxE" secondAttribute="centerX" id="XjD-xp-0N0"/>
+                                            <constraint firstItem="BRs-LT-nTb" firstAttribute="leading" secondItem="a1u-SJ-NxE" secondAttribute="leading" constant="70" id="gb1-MK-zUx"/>
+                                            <constraint firstItem="BRs-LT-nTb" firstAttribute="bottom" secondItem="a1u-SJ-NxE" secondAttribute="bottomMargin" id="nin-kW-5yx"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="a1u-SJ-NxE" secondAttribute="trailing" constant="30" id="9hI-ug-y6s"/>
+                                    <constraint firstAttribute="bottom" secondItem="a1u-SJ-NxE" secondAttribute="bottom" constant="10" id="al2-mV-F9r"/>
+                                    <constraint firstItem="a1u-SJ-NxE" firstAttribute="leading" secondItem="fVl-uN-Lug" secondAttribute="leading" constant="30" id="bI2-Ct-axw"/>
+                                    <constraint firstItem="a1u-SJ-NxE" firstAttribute="top" secondItem="fVl-uN-Lug" secondAttribute="top" constant="10" id="d0B-8T-Edb"/>
+                                </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="af9-Sg-eNA">
-                                <rect key="frame" x="0.0" y="151" width="375" height="452"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="af9-Sg-eNA">
+                                <rect key="frame" x="0.0" y="205" width="375" height="398"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mapTaskCell" id="4Vu-gu-qGp" customClass="MapTaskCell" customModule="BeeHive" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mapTaskCell" rowHeight="100" id="4Vu-gu-qGp" customClass="MapTaskCell" customModule="BeeHive" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Vu-gu-qGp" id="1Ht-VN-hxN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTe-3l-jnf" customClass="ProgressLineView" customModule="BeeHive" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="200"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <rect key="frame" x="15" y="0.0" width="50" height="100"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="60" id="oa7-Ej-umD"/>
+                                                        <constraint firstAttribute="width" constant="50" id="oa7-Ej-umD"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4B-hm-7HM">
-                                                    <rect key="frame" x="60" y="5" width="315" height="25"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4B-hm-7HM">
+                                                    <rect key="frame" x="82" y="13" width="274" height="25"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="VpN-J7-cOi"/>
+                                                        <constraint firstAttribute="height" constant="25" id="XRs-vm-rIq"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <color key="textColor" red="0.95294117647058818" green="0.42745098039215684" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bHT-ON-bon">
-                                                    <rect key="frame" x="60" y="31" width="135" height="135"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="135" id="9Wo-dy-x0h"/>
-                                                    </constraints>
-                                                </mapView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yZ-M3-2b6">
-                                                    <rect key="frame" x="60" y="167" width="307" height="25"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="Vhl-96-xHk"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="82" y="46" width="274" height="25"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="truck" translatesAutoresizingMaskIntoConstraints="NO" id="yV3-2J-Y1M">
-                                                    <rect key="frame" x="203" y="25" width="150" height="150"/>
-                                                    <color key="backgroundColor" red="0.28001528980000001" green="0.85423451660000005" blue="0.34582722189999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="4yZ-M3-2b6" firstAttribute="top" secondItem="bHT-ON-bon" secondAttribute="bottom" constant="1" id="3Ik-bm-YPq"/>
                                                 <constraint firstItem="OTe-3l-jnf" firstAttribute="top" secondItem="1Ht-VN-hxN" secondAttribute="top" id="4DL-iL-1hD"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="yV3-2J-Y1M" secondAttribute="trailing" constant="14" id="4We-Vs-JIu"/>
-                                                <constraint firstItem="j4B-hm-7HM" firstAttribute="leading" secondItem="OTe-3l-jnf" secondAttribute="trailing" id="KLm-7F-tge"/>
-                                                <constraint firstItem="j4B-hm-7HM" firstAttribute="top" secondItem="1Ht-VN-hxN" secondAttribute="top" constant="5" id="Phg-f6-jqD"/>
-                                                <constraint firstItem="4yZ-M3-2b6" firstAttribute="leading" secondItem="OTe-3l-jnf" secondAttribute="trailing" id="Tjt-Ob-zTN"/>
-                                                <constraint firstItem="yV3-2J-Y1M" firstAttribute="centerY" secondItem="OTe-3l-jnf" secondAttribute="centerY" id="UfE-d5-OQ7"/>
+                                                <constraint firstItem="j4B-hm-7HM" firstAttribute="leading" secondItem="4yZ-M3-2b6" secondAttribute="leading" id="9m6-wH-oAJ"/>
+                                                <constraint firstItem="j4B-hm-7HM" firstAttribute="top" secondItem="1Ht-VN-hxN" secondAttribute="topMargin" constant="5" id="QuQ-yr-xQX"/>
                                                 <constraint firstAttribute="bottom" secondItem="OTe-3l-jnf" secondAttribute="bottom" id="b4W-Kx-0P4"/>
-                                                <constraint firstItem="yV3-2J-Y1M" firstAttribute="leading" secondItem="bHT-ON-bon" secondAttribute="trailing" constant="8" symbolic="YES" id="b7K-CG-QwB"/>
-                                                <constraint firstItem="bHT-ON-bon" firstAttribute="leading" secondItem="OTe-3l-jnf" secondAttribute="trailing" id="bSJ-ct-eH3"/>
-                                                <constraint firstAttribute="trailing" secondItem="j4B-hm-7HM" secondAttribute="trailing" id="kqJ-yX-kvI"/>
-                                                <constraint firstItem="4yZ-M3-2b6" firstAttribute="trailing" secondItem="1Ht-VN-hxN" secondAttribute="trailingMargin" id="kwd-JU-0LC"/>
-                                                <constraint firstItem="yV3-2J-Y1M" firstAttribute="top" secondItem="1Ht-VN-hxN" secondAttribute="topMargin" constant="17" id="nB0-JA-gtS"/>
-                                                <constraint firstItem="OTe-3l-jnf" firstAttribute="leading" secondItem="1Ht-VN-hxN" secondAttribute="leading" id="o9F-gb-Ewa"/>
-                                                <constraint firstItem="bHT-ON-bon" firstAttribute="trailing" secondItem="1Ht-VN-hxN" secondAttribute="trailingMargin" constant="-172" id="oGF-ff-Ja5"/>
-                                                <constraint firstItem="bHT-ON-bon" firstAttribute="top" secondItem="j4B-hm-7HM" secondAttribute="bottom" constant="1" id="pjg-Ob-vhH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="4yZ-M3-2b6" secondAttribute="bottom" constant="21" id="en8-Ra-ouR"/>
+                                                <constraint firstItem="j4B-hm-7HM" firstAttribute="leading" secondItem="OTe-3l-jnf" secondAttribute="trailing" constant="17" id="jOE-LD-MAp"/>
+                                                <constraint firstItem="j4B-hm-7HM" firstAttribute="trailing" secondItem="4yZ-M3-2b6" secondAttribute="trailing" id="nTD-QM-YAI"/>
+                                                <constraint firstItem="OTe-3l-jnf" firstAttribute="leading" secondItem="1Ht-VN-hxN" secondAttribute="leading" constant="15" id="o9F-gb-Ewa"/>
+                                                <constraint firstItem="j4B-hm-7HM" firstAttribute="trailing" secondItem="1Ht-VN-hxN" secondAttribute="trailingMargin" constant="-11" id="qjC-ca-fhD"/>
+                                                <constraint firstItem="4yZ-M3-2b6" firstAttribute="top" secondItem="j4B-hm-7HM" secondAttribute="bottom" constant="8" symbolic="YES" id="wpS-tn-oeb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <outlet property="mapImgView" destination="yV3-2J-Y1M" id="ZHZ-7V-58B"/>
-                                            <outlet property="mapView" destination="bHT-ON-bon" id="YkA-Q2-Mlx"/>
                                             <outlet property="progressHeaderView" destination="OTe-3l-jnf" id="TK2-Uk-Jdk"/>
                                             <outlet property="taskLabel" destination="j4B-hm-7HM" id="X9V-GV-kMH"/>
                                         </connections>
@@ -291,8 +319,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="af9-Sg-eNA" firstAttribute="height" secondItem="g2P-Uo-OvQ" secondAttribute="height" multiplier="0.75" id="636-5j-KYx"/>
-                            <constraint firstItem="G1D-N7-jYd" firstAttribute="top" secondItem="af9-Sg-eNA" secondAttribute="bottom" id="ChV-vd-gQX"/>
+                            <constraint firstItem="af9-Sg-eNA" firstAttribute="height" secondItem="g2P-Uo-OvQ" secondAttribute="height" multiplier="0.66" id="636-5j-KYx"/>
                             <constraint firstItem="fVl-uN-Lug" firstAttribute="trailing" secondItem="af9-Sg-eNA" secondAttribute="trailing" id="CoO-DW-6ZB"/>
                             <constraint firstItem="fVl-uN-Lug" firstAttribute="width" secondItem="g2P-Uo-OvQ" secondAttribute="width" id="Rsr-4U-D5w"/>
                             <constraint firstItem="af9-Sg-eNA" firstAttribute="top" secondItem="fVl-uN-Lug" secondAttribute="bottom" id="SFc-qz-rY6"/>
@@ -301,27 +328,29 @@
                             <constraint firstAttribute="trailing" secondItem="fVl-uN-Lug" secondAttribute="trailing" id="kIv-tc-Vjf"/>
                             <constraint firstItem="fVl-uN-Lug" firstAttribute="top" secondItem="g2P-Uo-OvQ" secondAttribute="top" id="lCo-Ol-01h"/>
                             <constraint firstItem="af9-Sg-eNA" firstAttribute="width" secondItem="g2P-Uo-OvQ" secondAttribute="width" id="q45-Ht-Q62"/>
-                            <constraint firstItem="fVl-uN-Lug" firstAttribute="height" secondItem="g2P-Uo-OvQ" secondAttribute="height" multiplier="0.25" id="wWJ-dr-7uN"/>
+                            <constraint firstItem="fVl-uN-Lug" firstAttribute="height" secondItem="g2P-Uo-OvQ" secondAttribute="height" multiplier="0.34" id="wWJ-dr-7uN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="iAe-Y6-H6e"/>
+                    <navigationItem key="navigationItem" title="Job Tasks" id="iAe-Y6-H6e"/>
                     <connections>
+                        <outlet property="summaryView" destination="a1u-SJ-NxE" id="gvY-TN-dc0"/>
                         <outlet property="tableView" destination="af9-Sg-eNA" id="OYg-j2-jO4"/>
+                        <outlet property="taskProgressCircleView" destination="BRs-LT-nTb" id="5cl-Us-Pu7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ONs-L8-zz2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-334" y="-81"/>
+            <point key="canvasLocation" x="-335.19999999999999" y="-81.409295352323838"/>
         </scene>
         <!--BeeHive-->
         <scene sceneID="9H6-tV-FML">
             <objects>
-                <navigationController title="BeeHive" id="6hC-xX-n0C" sceneMemberID="viewController">
+                <navigationController title="BeeHive" id="6hC-xX-n0C" customClass="NavigationViewController" customModule="BeeHive" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="M8f-GH-fvp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.95272701978683472" green="0.42709833383560181" blue="0.26422321796417236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.90196078431372551" green="0.38823529411764707" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>

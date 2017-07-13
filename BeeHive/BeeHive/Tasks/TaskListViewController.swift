@@ -10,14 +10,40 @@ import UIKit
 
 class TaskListViewController: UIViewController, UITableViewDataSource {
 
-   @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var summaryView: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var taskProgressCircleView: ProgressCircleView!
     
-     let taskData = ["Go to Store"]
+    let taskData = ["Go to Store", "Do Some Stuff", "Fill out a form", "Return to Office"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        self.delay(1.0) {
+            self.taskProgressCircleView.animateCircle(duration: Double(self.taskProgressCircleView.percentComplete / 100))
+        }
+    }
+    
+ override func viewWillLayoutSubviews() {
+        summaryView.layer.cornerRadius = 25
+        let gradientLayer = CAGradientLayer()
+    
+        gradientLayer.frame = view.bounds
+        gradientLayer.locations = [0.0, 0.30]
+        //F36D43
+    //F5A187
+    //F39476  //F2BEAE
+    
+    gradientLayer.colors = [UIColor(rgb: 0xe6632c).cgColor, UIColor(rgb: 0xFA9164).cgColor]
+    
+    view.layer.insertSublayer(gradientLayer, at: 0)
+    super.viewWillLayoutSubviews()
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
