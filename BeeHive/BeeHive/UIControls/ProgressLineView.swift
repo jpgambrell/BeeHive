@@ -71,8 +71,9 @@ class ProgressLineView: UIView {
         
         let arcCenterPoint = CGPoint(x:xPos, y:ceil(bounds.height/2))
         
-        
-        let circlePath = UIBezierPath(arcCenter: arcCenterPoint, radius: 20-4, startAngle: CGFloat(0).toRadians(), endAngle: CGFloat(360).toRadians(), clockwise: true)
+       
+        //let circlePath = UIBezierPath(arcCenter: arcCenterPoint, radius: 20-4, startAngle: CGFloat(0).toRadians(), endAngle: CGFloat(360).toRadians(), clockwise: true)
+        let circlePath = UIBezierPath(arcCenter: arcCenterPoint, radius: 20-4, startAngle:  CGFloat(0*(Double.pi) / 180.0), endAngle: CGFloat(360*(Double.pi) / 180.0), clockwise: true)
         
         circlePath.stroke()
         circleLayer.strokeColor = UIColor.black.cgColor

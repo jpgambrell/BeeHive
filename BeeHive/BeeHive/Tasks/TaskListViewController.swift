@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class TaskListViewController: UIViewController, UITableViewDataSource {
 
@@ -18,7 +19,6 @@ class TaskListViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {

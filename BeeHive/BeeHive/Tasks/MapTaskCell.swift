@@ -130,9 +130,7 @@ class MapTaskCell: UITableViewCell, MKMapViewDelegate {
         return renderer
     }
     func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
-        delay(1.0){
-         //self.mapImgView.image = UIImage(view: self.mapView)
-    }
+       
         
         
     }

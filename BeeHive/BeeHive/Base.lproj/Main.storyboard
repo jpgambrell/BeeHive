@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6hC-xX-n0C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6hC-xX-n0C">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -51,7 +51,7 @@
                                                 <integer key="value" value="40"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="percentComplete">
-                                                <integer key="value" value="67"/>
+                                                <integer key="value" value="62"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
                                                 <color key="value" red="0.95272701979999996" green="0.42709833380000001" blue="0.26422321799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -139,13 +139,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-ik-OcU">
-                                            <rect key="frame" x="60" y="31" width="135" height="135"/>
+                                            <rect key="frame" x="60" y="31" width="127" height="135"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="135" id="Cff-Bp-wtm"/>
                                             </constraints>
                                         </mapView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHj-7u-I4R">
-                                            <rect key="frame" x="60" y="167" width="307" height="25"/>
+                                            <rect key="frame" x="60" y="167" width="299" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="9Fv-Aj-jZl"/>
                                             </constraints>
@@ -275,7 +275,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4B-hm-7HM">
-                                                    <rect key="frame" x="82" y="13" width="274" height="25"/>
+                                                    <rect key="frame" x="82" y="16" width="267" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="XRs-vm-rIq"/>
                                                     </constraints>
@@ -284,7 +284,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yZ-M3-2b6">
-                                                    <rect key="frame" x="82" y="46" width="274" height="25"/>
+                                                    <rect key="frame" x="82" y="49" width="267" height="19"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -348,7 +348,7 @@
                 <navigationController title="BeeHive" id="6hC-xX-n0C" customClass="NavigationViewController" customModule="BeeHive" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="M8f-GH-fvp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.90196078431372551" green="0.38823529411764707" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
