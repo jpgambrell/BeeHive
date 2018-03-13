@@ -18,4 +18,13 @@ struct User {
         self.departmentId = departmentId
         self.supervisorId = supervisorId
     }
+    
+    func asDictionary() -> [String: String] {
+        return [ "username" : self.userName ?? "",
+            "firstname" : self.firstName ?? "",
+            "lastname" : self.lastName ?? "",
+            "roleid" : self.roleId ?? "",
+            "departmentid" : self.departmentId ?? "",
+            "supervisorid" : self.supervisorId ?? ""]
+    }
 }
